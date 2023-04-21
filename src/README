@@ -1,3 +1,4 @@
+Java Program README
 This Java program implements two algorithms for finding the Minimum Spanning Tree (MST) of a graph - Kruskal's algorithm and Prim's algorithm.
 
 The program consists of three Java files:
@@ -6,6 +7,22 @@ Main.java: This is the main file that runs the program. It takes input for the g
 Kruskal.java: This file implements Kruskal's algorithm for finding the MST. It uses the Union-Find data structure to keep track of subsets and their parents and ranks. It returns the MST in the form of an adjacency matrix.
 Prim.java: This file implements Prim's algorithm for finding the MST. It uses a priority queue to keep track of the edges with minimum weights and returns the MST in the form of an adjacency matrix.
 
-To run the program, execute the following command in the terminal:
+
+Prerequisites
+To use this program, you will need the following:
+Java Development Kit (JDK) installed on your computer
+A command prompt or terminal to run commands
+
+
+
+Open a terminal or command prompt in the directory that contains the Makefile and the Java source code file(s).
+Usage
+To use this program, follow these steps:
+Type make and press Enter to compile the Java source code file(s) into class files. If the compilation is successful, you should see a command line to input new command.
+Type "make run" and press Enter to run the Java program. The program should start and output a random matrix to the terminal. Enter 'prim' or 'kruskal' to run the algorithm.
+If you encounter any errors during compilation or execution, the terminal should display an error message to help you diagnose the problem. You can also check the Makefile to make sure that the variables and targets are set up correctly for your program.
+
+
+Commands
 make
-java Main
+make run

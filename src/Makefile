@@ -1,20 +1,20 @@
-JAVAC = javac
-JAVA = java
-JFLAGS = -g
+JAVAC=javac
+JAVA=java
+JFLAGS=
+SOURCES=Main.java
+CLASSFILES=$(SOURCES:.java=.class)
+MAINCLASS=Main
 
-# Define the source files and their dependencies
-SRC = Main.java Prim.java Kruskal.java
-DEPENDENCIES = Prim.class Kruskal.class
+.PHONY: all clean
 
-all: $(SRC:.java=.class)
+all: $(CLASSFILES)
+
+clean:
+	rm -f $(CLASSFILES)
 
 %.class: %.java
 	$(JAVAC) $(JFLAGS) $<
 
-Main.class: $(DEPENDENCIES)
+run: $(CLASSFILES)
+	$(JAVA) $(MAINCLASS)
 
-run: Main.class
-	$(JAVA) Main
-
-clean:
-	$(RM) *.class
